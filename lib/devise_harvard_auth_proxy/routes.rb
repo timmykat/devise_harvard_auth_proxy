@@ -1,6 +1,6 @@
-if ActionController::Routing.name =~ /ActionDispatch/
-  # Rails 3
-  
+# if ActionController::Routing.name =~ /ActionDispatch/
+#   # Rails 3
+#   
   ActionDispatch::Routing::Mapper.class_eval do
     protected
 
@@ -18,13 +18,13 @@ if ActionController::Routing.name =~ /ActionDispatch/
     end
   
   end
-else
-  # Rails 2
-  
-  ActionController::Routing::RouteSet::Mapper.class_eval do
-    protected
-    def harvard_auth_proxy_authenticatable(routes, mapping)
-      # TODO
-    end
-  end
-end
+# else
+#   # Rails 2
+#   
+#   ActionController::Routing::RouteSet::Mapper.class_eval do
+#     protected
+#     def harvard_auth_proxy_authenticatable(routes, mapping)
+#       # TODO
+#     end
+#   end
+# end
